@@ -1,0 +1,63 @@
+@import 'vars';
+@import 'custom.table';
+@import 'mixin';
+@import 'slide';
+@import 'custom';
+
+.custom-form-control,
+.custom-btn {
+    border: 1px solid #A9A9A9;
+    box-shadow: none;
+    border-radius: 2px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    padding: 6px 16px 7px 16px;
+    color: #565656;
+}
+.custom-navbar .container .custom-form-control:focus{
+    border-color: $brand-danger;
+    box-shadow: 0 0 2px 0 $brand-danger ;
+}
+
+.custom-btn:hover {
+    background-color: #d4d4d4;
+    border: 1px solid #8c8c8c;
+    color: $btn-primary-color-dark;
+}
+.custom-btn-primary{
+    color: $brand-danger;
+    border-color: $brand-danger;
+    background-color: transparent;
+
+.custom-btn-primary {
+  @include button-style($brand-primary);// @mixin
+}
+
+.custom-btn-danger {
+  @include button-style($brand-danger);//@mixin
+}
+
+.custom-btn-primary2 {// الاب
+  color: white;
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  /* الابناء */
+        &:hover,// & and معنها  
+        &:focus,
+        &:active,
+        &:focus,
+        &:active:focus,
+        &:active:hover {
+            background-color: $brand-danger;
+            border-color: $brand-danger;
+            color: #ffffff
+        }
+}
+.custom-btn-primary2{
+ @include button-style($brand-primary);//@mixin
+    
+}
+.custom-btn-danger{
+  @include button-style($brand-danger);//@mixin
+    }   
+}
